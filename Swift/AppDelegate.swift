@@ -16,6 +16,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //1.create the top window
+        
+        let mainScreen = UIScreen.mainScreen();
+        let screenBounds = mainScreen.bounds
+        self.window = UIWindow.init(frame: screenBounds)
+        
+        //a. init one tab bar controller
+        let tb:UITabBarController = UITabBarController()
+        self.window?.rootViewController = tb
+        
+        
+        //b. create sub controllers
+        
+        let controllerOne  = HomeUIViewController.init() //UIViewController.init()
+        controllerOne.view.backgroundColor = UIColor.greenColor()
+        controllerOne.tabBarItem.title = "测试"
+        
+        controllerOne.tabBarItem.selectedImage = UIImage.init(named: "skin_test_selected_image")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        controllerOne.tabBarItem.image = UIImage.init(named: "skin_test_unselected_image")?.imageWithRenderingMode(.AlwaysOriginal)
+        
+        // set the color of the tabbaritem text as selected
+        controllerOne.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.brownColor()], forState: .Selected)
+        // set the color of the tabbaritem text as normal
+        controllerOne.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.grayColor()], forState: .Normal)
+        controllerOne.tabBarItem.badgeValue = "99+"
+        
+        
+        
+        let controllerTwo  = UIViewController.init()
+        controllerTwo.view.backgroundColor = UIColor.brownColor()
+        controllerTwo.tabBarItem.title = "联系人"
+        controllerTwo.tabBarItem.image = UIImage.init(named: "skin_test_unselected_image")
+        
+        
+        let controllerThree  = UIViewController.init()
+        controllerThree.view.backgroundColor = UIColor.grayColor()
+        controllerThree.tabBarItem.title = "动态"
+        controllerThree.tabBarItem.image = UIImage.init(named: "skin_test_unselected_image")
+        
+        let controllerFour  = UIViewController.init()
+        controllerFour.view.backgroundColor = UIColor.darkGrayColor()
+        controllerFour.tabBarItem.title = "设置"
+        controllerFour.tabBarItem.image = UIImage.init(named: "skin_test_unselected_image")
+        
+        //c. add sub controller to main TabBarController
+        
+        tb.viewControllers = [controllerOne,controllerTwo,controllerThree,controllerFour]
+        
+        //d. set the main window and show 
+        
+        //self.window?.makeKeyAndVisible()
+        window?.makeKeyAndVisible()
+        
+
+        
         return true
     }
 

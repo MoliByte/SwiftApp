@@ -1,0 +1,29 @@
+PODS:
+  - Alamofire (3.4.0)
+  - AlamofireSwiftyJSON (0.1.1):
+    - Alamofire (~> 3.4)
+    - SwiftyJSON (~> 2.3)
+  - Genome (2.0.4):
+    - PureJsonSerializer (~> 1.0.0)
+  - PullToRefreshSwift (2.0.0)
+  - PureJsonSerializer (1.0.2)
+  - RAMAnimatedTabBarController (1.5.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.0)
+  - AlamofireSwiftyJSON (~> 0.1.0)
+  - Genome (~> 2.0.0)
+  - PullToRefreshSwift
+  - RAMAnimatedTabBarController
+
+SPEC CHECKSUMS:
+  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
+  AlamofireSwiftyJSON: 4787ff07c7e6687b787f1723229e729653e3359f
+  Genome: ee22f71d87eefac0f622f77e75d1fef7f7fa12e7
+  PullToRefreshSwift: 5c509e89c6638eae689813b665eff1a0ea0560d3
+  PureJsonSerializer: 81d6bc0e21ed4b837193279aa3d29981f75f9057
+  RAMAnimatedTabBarController: 2557ba7408d3e36a6d69aac7d098e7256539e7a5
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
