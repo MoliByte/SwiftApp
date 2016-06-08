@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import QorumLogs
+import MBProgressHUD
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +18,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        QorumLogs.enabled = true
+        QorumOnlineLogs.enabled = true
+        QorumLogs.minimumLogLevelShown = 2
+        QorumOnlineLogs.minimumLogLevelShown = 4
+        
+        QorumLogs.colorsForLogLevels[0] = QLColor(r: 255, g: 125, b: 0)
+        QorumLogs.colorsForLogLevels[1] = QLColor(r: 255, g: 20, b: 147)
+        
+        let hub:MBProgressHUD = MBProgressHUD.init();
+        hub.labelText = "加载中..."
+        hub.show(true)
         
         //1.create the top window
         
@@ -38,13 +51,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         controllerOne.tabBarItem.image = UIImage.init(named: "skin_test_unselected_image")?.imageWithRenderingMode(.AlwaysOriginal)
         
+        //change the attributes of tabitem
+        
+        let cgfloat:CGFloat = 12
+        let font:UIFont = UIFont.init(name: "Helvetica", size: cgfloat)!
+        
+        let cgSize:CGSize = CGSize.init(width: 50, height: 50)
+        
+        let shadow:NSShadow = NSShadow.init()
+        
+        shadow.shadowOffset = cgSize
+        
+        let tabItemAttributes = [
+            NSForegroundColorAttributeName : UIColor.brownColor(),//change the font color
+            
+            NSFontAttributeName:font, //change the font size
+            
+            NSTextEffectAttributeName : NSTextEffectLetterpressStyle,
+            NSBackgroundColorAttributeName : UIColor.blueColor(),
+            NSStrokeWidthAttributeName : 50,
+            NSStrokeColorAttributeName : UIColor.darkGrayColor(),
+            NSUnderlineStyleAttributeName : 1,
+            //NSShadowAttributeName :shadow
+            
+            ]
+        
         // set the color of the tabbaritem text as selected
-        controllerOne.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.brownColor()], forState: .Selected)
+        controllerOne.tabBarItem.setTitleTextAttributes(tabItemAttributes, forState: .Selected)
         // set the color of the tabbaritem text as normal
-        controllerOne.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.grayColor()], forState: .Normal)
+        controllerOne.tabBarItem.setTitleTextAttributes(tabItemAttributes, forState: .Normal)
         
+
         
-        controllerOne.tabBarItem.badgeValue = "99+"
+        controllerOne.tabBarItem.badgeValue = "11+"
         
         
         
@@ -81,23 +120,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+        QL1("1.application will resign active.")
     }
 
     func applicationDidEnterBackground(application: UIApplication) {
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+         QL2("2.application did enter background.")
     }
 
     func applicationWillEnterForeground(application: UIApplication) {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+        QL3("3.application will enter foreground.")
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        QL4("4.application did become active.")
     }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        QL4("5.application will terminate.")
     }
 
 

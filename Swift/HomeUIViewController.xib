@@ -3,30 +3,65 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeUIViewController" customModule="SwiftApp" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="Ko9-w3-zWP" id="niB-8j-Tyn"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" restorationIdentifier="home" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Llr-wB-gP0">
-                    <rect key="frame" x="277.5" y="290" width="46" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ko9-w3-zWP">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Ko9-w3-zWP" secondAttribute="height" multiplier="375:667" id="Sv2-G8-yMG"/>
+                        <constraint firstAttribute="width" secondItem="Ko9-w3-zWP" secondAttribute="height" multiplier="375:667" id="Yrr-qh-5nZ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="Sv2-G8-yMG"/>
+                            <exclude reference="Yrr-qh-5nZ"/>
+                        </mask>
+                    </variation>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="Llr-wB-gP0" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Lcc-qL-RiS"/>
-                <constraint firstItem="Llr-wB-gP0" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="cUB-dy-dDc"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="AjX-3T-v01"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BBd-cV-QSz"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="DNA-18-dBu"/>
+                <constraint firstAttribute="trailing" secondItem="Ko9-w3-zWP" secondAttribute="trailing" id="S6f-Tt-mE5"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="X4l-nz-RuU"/>
+                <constraint firstAttribute="bottom" secondItem="Ko9-w3-zWP" secondAttribute="bottom" id="fab-Ug-Fyl"/>
+                <constraint firstAttribute="bottom" secondItem="Ko9-w3-zWP" secondAttribute="bottom" constant="49" id="gRi-gP-WMe"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="jEo-wI-suY"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kXf-1V-gtz"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="r9V-ms-EEr"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="uV4-GI-kkU"/>
+                <constraint firstAttribute="bottom" secondItem="Ko9-w3-zWP" secondAttribute="bottom" constant="49" id="vHR-Uh-sW3"/>
+                <constraint firstItem="Ko9-w3-zWP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="wQ9-9F-a5i"/>
             </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="AjX-3T-v01"/>
+                    <exclude reference="fab-Ug-Fyl"/>
+                    <exclude reference="jEo-wI-suY"/>
+                    <exclude reference="kXf-1V-gtz"/>
+                    <exclude reference="r9V-ms-EEr"/>
+                    <exclude reference="uV4-GI-kkU"/>
+                    <exclude reference="vHR-Uh-sW3"/>
+                    <exclude reference="wQ9-9F-a5i"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="-8.5" y="-96.5"/>
         </view>
     </objects>
 </document>

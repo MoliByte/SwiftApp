@@ -11,3 +11,8 @@ pod 'Genome', '~> 2.0.0'
 pod 'PullToRefreshSwift'
 
 pod 'RAMAnimatedTabBarController'
+
+#####xcode QorumLogs
+pod 'QorumLogs'
+
+pod 'MBProgressHUD', '~> 0.9.2'

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E3356F11D07F4BF005924FE /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3356EF1D07F4BF005924FE /* TableViewCell.swift */; };
+		7E3356F21D07F4BF005924FE /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3356F01D07F4BF005924FE /* TableViewCell.xib */; };
+		7E3356F51D08013A005924FE /* LabelStudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E3356F31D08013A005924FE /* LabelStudyViewController.swift */; };
+		7E3356F61D08013A005924FE /* LabelStudyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E3356F41D08013A005924FE /* LabelStudyViewController.xib */; };
 		7ED759CC1D07057100019760 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED759CB1D07057100019760 /* AppDelegate.swift */; };
 		7ED759CE1D07057100019760 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ED759CD1D07057100019760 /* ViewController.swift */; };
 		7ED759D11D07057100019760 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED759CF1D07057100019760 /* Main.storyboard */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		603DBAF119B32C1B5953D872 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E3356EF1D07F4BF005924FE /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		7E3356F01D07F4BF005924FE /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		7E3356F31D08013A005924FE /* LabelStudyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelStudyViewController.swift; sourceTree = "<group>"; };
+		7E3356F41D08013A005924FE /* LabelStudyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LabelStudyViewController.xib; sourceTree = "<group>"; };
 		7ED759C81D07057100019760 /* SwiftApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED759CB1D07057100019760 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ED759CD1D07057100019760 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +133,10 @@
 				7ED759D71D07057100019760 /* Info.plist */,
 				7ED75A001D07B2D200019760 /* HomeUIViewController.swift */,
 				7ED75A011D07B2D200019760 /* HomeUIViewController.xib */,
+				7E3356EF1D07F4BF005924FE /* TableViewCell.swift */,
+				7E3356F01D07F4BF005924FE /* TableViewCell.xib */,
+				7E3356F31D08013A005924FE /* LabelStudyViewController.swift */,
+				7E3356F41D08013A005924FE /* LabelStudyViewController.xib */,
 			);
 			name = SwiftApp;
 			path = Swift;
@@ -275,6 +287,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED759D61D07057100019760 /* LaunchScreen.storyboard in Resources */,
+				7E3356F61D08013A005924FE /* LabelStudyViewController.xib in Resources */,
+				7E3356F21D07F4BF005924FE /* TableViewCell.xib in Resources */,
 				7ED759D31D07057100019760 /* Assets.xcassets in Resources */,
 				7ED759D11D07057100019760 /* Main.storyboard in Resources */,
 				7ED75A031D07B2D200019760 /* HomeUIViewController.xib in Resources */,
@@ -351,6 +365,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ED75A021D07B2D200019760 /* HomeUIViewController.swift in Sources */,
+				7E3356F11D07F4BF005924FE /* TableViewCell.swift in Sources */,
+				7E3356F51D08013A005924FE /* LabelStudyViewController.swift in Sources */,
 				7ED759CE1D07057100019760 /* ViewController.swift in Sources */,
 				7ED759CC1D07057100019760 /* AppDelegate.swift in Sources */,
 			);
