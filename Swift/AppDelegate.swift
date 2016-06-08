@@ -42,6 +42,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         controllerOne.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.brownColor()], forState: .Selected)
         // set the color of the tabbaritem text as normal
         controllerOne.tabBarItem.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.grayColor()], forState: .Normal)
+        
+        
         controllerOne.tabBarItem.badgeValue = "99+"
         
         
